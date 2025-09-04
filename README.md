@@ -12,7 +12,7 @@
 A sleek, responsive, and feature-rich quiz application built with modern web technologies.  
 This project showcases strong **front-end fundamentals**, including state management, API handling, and crafting a clean, user-friendly interface.
 
-**Live Demo:** [Link Here](#) <!-- TODO: Add your Netlify/Vercel live demo URL -->
+**Live Demo:** [Link Here](https://quizwhiz-anurag.vercel.app/) 
 
 <!-- TODO: Replace the placeholder below with a real screenshot of your application -->
 ![App Screenshot Placeholder](/Screenshot.png)
@@ -115,5 +115,6 @@ Create an optimized, production-ready build:
    - A local ``` questions.ts ``` file is included as a **fallback**, ensuring the quiz still runs if the API fails.
 
 ## 📬 Contact
-   **Mail** - 
-   **Project Link** -
+   **Mail** -  ```anurag26official@gmail.com```
+   
+   **Project Link** -  [Link Here](https://quizwhiz-anurag.vercel.app/) 
