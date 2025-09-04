@@ -15,7 +15,7 @@ This project showcases strong **front-end fundamentals**, including state manage
 **Live Demo:** [Link Here](https://quizwhiz-anurag.vercel.app/) 
 
 <!-- TODO: Replace the placeholder below with a real screenshot of your application -->
-![App Screenshot Placeholder](/Screenshot.png)
+![App Screenshot Placeholder](./public/Screenshot.png)
 
 ---
 
