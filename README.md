@@ -99,18 +99,19 @@ Create an optimized, production-ready build:
    ```bash
    npm run build
    ```
-   This bundles the app into the ```bash dist/ ``` directory, optimized and ready for deployment.
+   This bundles the app into the ``` dist/ ``` directory, optimized and ready for deployment.
 
 ## 🏗 Architectural Decisions
    **⚙️ State Management**
-   Rather than using a large state library like Redux, this project uses React’s Context API with ```bash useReducer ```, managed via a custom ```bash useQuiz ``` hook. This approach was chosen because it:
+   Rather than using a large state library like Redux, this project uses React’s Context API with ``` useReducer ```, managed via a custom ``` useQuiz ``` hook. This approach was chosen because it:
    - Is **lightweight** and avoids unnecessary boilerplate.
-   - Encapsulates all quiz logic (state transitions, actions) in a single, cohesive unit ```bash(useQuiz.tsx)```, making state predictable and easy to maintain.
+   - Encapsulates all quiz logic (state transitions, actions) in a single, cohesive unit ```(useQuiz.tsx)```, making state predictable and easy to maintain.
    - Provides a clean way for components to **access and manipulate state** without prop-drilling
+     
    **🌐 API Handling**
    - Questions are fetched asynchronously from **Open Trivia DB**.
    - The app gracefully handles loading and error states for a smooth experience even on slow or failed requests.
-   - A local ```bash questions.ts ``` file is included as a **fallback**, ensuring the quiz still runs if the API fails.
+   - A local ``` questions.ts ``` file is included as a **fallback**, ensuring the quiz still runs if the API fails.
 
 ## 📬 Contact
    **Mail** - 
