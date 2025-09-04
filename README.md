@@ -16,6 +16,8 @@ This project showcases strong **front-end fundamentals**, including state manage
 
 <!-- TODO: Replace the placeholder below with a real screenshot of your application -->
 ![App Screenshot Placeholder](./public/Screenshot.png)
+![App Screenshot Placeholder](./public/Screenshot0.png)
+![App Screenshot Placeholder](./public/Screenshot1.png)
 
 ---
 
