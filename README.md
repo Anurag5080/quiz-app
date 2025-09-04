@@ -38,7 +38,7 @@ This project leverages a modern, efficient, and type-safe stack:
 - **Framework** → React (v18+)  
 - **Language** → TypeScript  
 - **Build Tool** → Vite  
-- **Styling** → Tailwind CSS  
+- **Styling** → Tailwind CSS v4 
 - **Routing** → React Router DOM  
 - **Linting/Formatting** → ESLint & Prettier  
 
