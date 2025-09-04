@@ -42,7 +42,7 @@ const Results: FC = () => {
           <ol className="list-decimal list-inside space-y-1">
             {highScores.map((highScore: number, index: number) => (
               <li key={index} className="text-lg text-gray-600 font-medium">
-                {index + 1}. {highScore} points
+               {highScore} points
               </li>
             ))}
           </ol>
