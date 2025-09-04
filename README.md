@@ -1,81 +1,102 @@
-Quiz App (TypeScript Edition)
-A modern and responsive quiz application built with React and TypeScript, designed to provide a seamless and engaging user experience. This project was developed as part of a front-end assessment to showcase skills in React, TypeScript, state management, API integration, and UI/UX design.
+QuizWhiz 🧠✨
+A sleek, responsive, and feature-rich quiz application built with modern web technologies. This project was developed to showcase strong front-end fundamentals, including state management, API handling, and creating a clean, user-friendly interface.
+
+[Live Demo Link Here] <!-- TODO: Add your live demo link from Netlify or Vercel -->
+
+<!-- TODO: Replace the placeholder above with a real screenshot of your application -->
 
 Features
-Type-Safe Codebase: Built with TypeScript for enhanced reliability and maintainability.
+QuizWhiz is packed with features designed to provide an engaging and seamless user experience.
 
-Dynamic Question Loading: Fetches questions from the Open Trivia DB API, with a local JSON fallback.
+Dynamic Content: Fetches questions directly from the Open Trivia DB API.
 
-Multiple Difficulty Levels: Users can choose between easy, medium, and hard difficulty levels.
+Selectable Difficulty: Users can choose between Easy, Medium, or Hard difficulty levels before starting.
 
-Interactive Quiz Interface: Displays one question at a time with multiple-choice answers.
+Interactive Quiz Experience:
 
-Timer per Question: Each question has a 30-second timer that auto-advances if time runs out.
+Displays one question at a time with shuffled answer choices.
 
-Progress Indicator: A progress bar shows the user's progress through the quiz.
+30-Second Timer per question to keep the challenge exciting.
 
-Score Tracking: Tracks the user's score and provides instant feedback on answers.
+Instant feedback with color-coded answers (green for correct, red for incorrect).
 
-Detailed Results Page: Shows a summary of the quiz, including the final score and a review of each answer.
+A dynamic Progress Bar to track your advancement through the quiz.
 
-Persistent High Scores: Saves high scores to localStorage.
+Detailed Results Page:
 
-Responsive Design: Fully responsive layout that works on desktop and mobile devices.
+Shows your final score and a summary of all your answers.
 
-Accessibility: Includes focus states and keyboard navigation considerations.
+Highlights your selection vs. the correct answer for each question.
+
+Persistent High Scores: Your top 5 scores are saved locally using localStorage.
+
+Fully Responsive Design: A clean, mobile-first layout that looks great on any device, from phones to desktops.
+
+Smooth Animations: Subtle transitions for a more polished user experience.
+
+Accessibility: Keyboard navigation and proper focus states are implemented for better accessibility.
 
 Tech Stack
-React: A JavaScript library for building user interfaces.
+This project leverages a modern, efficient, and type-safe technology stack.
 
-TypeScript: A strongly typed superset of JavaScript.
+Framework: React (v18+)
 
-Vite: A fast build tool and development server.
+Language: TypeScript
 
-React Router: For declarative routing in React.
+Build Tool: Vite
 
-Tailwind CSS: A utility-first CSS framework for styling.
+Styling: Tailwind CSS
+
+Routing: React Router DOM
+
+Linting/Formatting: ESLint & Prettier
 
 Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+Follow these instructions to get a local copy of the project up and running on your machine.
 
 Prerequisites
-You need to have Node.js and npm installed on your machine.
-
-Node.js (v16 or later recommended)
-
-npm
+You need to have Node.js (version 16 or later) and npm installed on your computer.
 
 Installation & Setup
-Create the project with Vite:
+Clone the repository:
 
-npm create vite@latest quiz-app-ts -- --template react-ts
+git clone [https://github.com/your-username/quiz-app-ts.git](https://github.com/your-username/quiz-app-ts.git)
 
-Navigate into the directory:
+Navigate to the project directory:
 
 cd quiz-app-ts
 
-Install dependencies:
+Install the dependencies:
 
 npm install
 
-Install Tailwind CSS and React Router:
-
-npm install react-router-dom
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-Populate the project:
-Replace the generated placeholder files with the code provided for this project.
-
-Running the Application
-Start the development server:
+Run the development server:
 
 npm run dev
 
-This will run the app in development mode. Open http://localhost:5173 to view it in the browser.
+The application will be available at http://localhost:5173. The server supports Hot Module Replacement (HMR) for a fast development experience.
 
-Build for production:
+Building for Production
+To create a production-ready build of the app, run:
 
 npm run build
 
-This will build the app for production to the dist folder.
+This command bundles the application into the dist/ directory, optimized for deployment.
+
+Architectural Decisions
+State Management
+Instead of relying on a large state management library like Redux, this project uses React's built-in Context API and useReducer hook (managed via the custom useQuiz hook). This approach was chosen because:
+
+It is lightweight and sufficient for the application's needs, avoiding unnecessary boilerplate.
+
+It encapsulates all quiz-related logic (state transitions, actions) into a single, cohesive unit (useQuiz.tsx), making the state management predictable and easy to maintain.
+
+It provides a clean way for components to access and manipulate the quiz state without prop-drilling.
+
+API Handling
+Questions are fetched asynchronously from the Open Trivia DB. The application gracefully handles loading and error states, ensuring a smooth user experience even if the API call is slow or fails. A local questions.ts file is included as a fallback.
+
+Contact
+[Your Name] - [your.email@example.com]
+
+Project Link: https://github.com/your-username/quiz-app-ts
