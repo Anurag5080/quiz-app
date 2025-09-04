@@ -1,81 +1,119 @@
-Quiz App (TypeScript Edition)
-A modern and responsive quiz application built with React and TypeScript, designed to provide a seamless and engaging user experience. This project was developed as part of a front-end assessment to showcase skills in React, TypeScript, state management, API integration, and UI/UX design.
+# QuizWhiz 🧠✨
 
-Features
-Type-Safe Codebase: Built with TypeScript for enhanced reliability and maintainability.
+[![React](https://img.shields.io/badge/React-18%2B-61DAFB?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Build-Vite-646CFF?logo=vite)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Styles-TailwindCSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
+[![React Router](https://img.shields.io/badge/Routing-React%20Router-CA4245?logo=reactrouter)](https://reactrouter.com/)
+[![ESLint](https://img.shields.io/badge/Lint-ESLint-4B32C3?logo=eslint)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Format-Prettier-F7B93E?logo=prettier)](https://prettier.io/)
+[![API](https://img.shields.io/badge/API-Open%20Trivia%20DB-0A0A0A)](https://opentdb.com/)
 
-Dynamic Question Loading: Fetches questions from the Open Trivia DB API, with a local JSON fallback.
+A sleek, responsive, and feature-rich quiz application built with modern web technologies.  
+This project showcases strong **front-end fundamentals**, including state management, API handling, and crafting a clean, user-friendly interface.
 
-Multiple Difficulty Levels: Users can choose between easy, medium, and hard difficulty levels.
+**Live Demo:** [Link Here](#) <!-- TODO: Add your Netlify/Vercel live demo URL -->
 
-Interactive Quiz Interface: Displays one question at a time with multiple-choice answers.
+<!-- TODO: Replace the placeholder below with a real screenshot of your application -->
+![App Screenshot Placeholder](./screenshot.png)
 
-Timer per Question: Each question has a 30-second timer that auto-advances if time runs out.
+---
 
-Progress Indicator: A progress bar shows the user's progress through the quiz.
+## Table of Contents
 
-Score Tracking: Tracks the user's score and provides instant feedback on answers.
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#-prerequisites)
+  - [Installation--setup](#-installation--setup)
+- [Building for Production](#-building-for-production)
+- [Architectural Decisions](#-architectural-decisions)
+  - [State Management](#️-state-management)
+  - [API Handling](#-api-handling)
+- [Contact](#-contact)
 
-Detailed Results Page: Shows a summary of the quiz, including the final score and a review of each answer.
+---
 
-Persistent High Scores: Saves high scores to localStorage.
+## ✨ Features
 
-Responsive Design: Fully responsive layout that works on desktop and mobile devices.
+**QuizWhiz** is packed with features designed for an engaging and seamless experience.
 
-Accessibility: Includes focus states and keyboard navigation considerations.
+- **Dynamic Content** — Fetches questions directly from the **Open Trivia DB** API.
+- **Selectable Difficulty** — Choose **Easy**, **Medium**, or **Hard** before starting.
+- **Interactive Quiz Experience**
+  - Presents **one question at a time** with **shuffled** answer choices.
+  - **30-second timer** per question keeps the challenge exciting.
+  - **Instant feedback** with color-coded answers (✅ green for correct, ❌ red for incorrect).
+  - A dynamic **progress bar** to track your advancement through the quiz.
+- **Detailed Results Page**
+  - Shows your **final score** and a **summary** of all answers.
+  - Highlights **your selection** vs. the **correct answer** for each question.
+- **Persistent High Scores** — Top **5** scores saved locally via **`localStorage`**.
+- **Fully Responsive** — Mobile-first layout looks great on phones, tablets, and desktops.
+- **Smooth Animations** — Subtle transitions for a polished, modern feel.
+- **Accessibility** — Keyboard navigation and proper focus states are implemented.
 
-Tech Stack
-React: A JavaScript library for building user interfaces.
+---
 
-TypeScript: A strongly typed superset of JavaScript.
+## 🛠 Tech Stack
 
-Vite: A fast build tool and development server.
+Modern, efficient, and type-safe:
 
-React Router: For declarative routing in React.
+- **Framework:** React (v18+)
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **Linting/Formatting:** ESLint & Prettier
 
-Tailwind CSS: A utility-first CSS framework for styling.
+---
 
-Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+## 🚀 Getting Started
 
-Prerequisites
-You need to have Node.js and npm installed on your machine.
+Follow these steps to run the project locally.
 
-Node.js (v16 or later recommended)
+### ✅ Prerequisites
 
-npm
+- **Node.js** v16 or later  
+- **npm** (bundled with Node.js)
 
-Installation & Setup
-Create the project with Vite:
+### ⚡ Installation & Setup
 
-npm create vite@latest quiz-app-ts -- --template react-ts
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/quiz-app-ts.git
+2. **Navigate to the project directory**
+   ```bash
+   cd quiz-app
+3. **Install dependencies**
+   ```bash
+   npm install
+4. **Start the development server**
+   ```bash
+   npm run dev
+   
+The application will be available at http://localhost:5173 with HMR (Hot Module Replacement) for a fast dev experience.
 
-Navigate into the directory:
+## 📦 Building for Production
+Create an optimized, production-ready build:
+   ```bash
+   npm run build
+   ```
+   This bundles the app into the ``` dist/ ``` directory, optimized and ready for deployment.
 
-cd quiz-app-ts
+## 🏗 Architectural Decisions
+   **⚙️ State Management**
+   
+   Rather than using a large state library like Redux, this project uses React’s Context API with ``` useReducer ```, managed via a custom ``` useQuiz ``` hook. This approach was chosen because it:
+   - Is **lightweight** and avoids unnecessary boilerplate.
+   - Encapsulates all quiz logic (state transitions, actions) in a single, cohesive unit ```(useQuiz.tsx)```, making state predictable and easy to maintain.
+   - Provides a clean way for components to **access and manipulate state** without prop-drilling
+     
+   **🌐 API Handling**
+   - Questions are fetched asynchronously from **Open Trivia DB**.
+   - The app gracefully handles loading and error states for a smooth experience even on slow or failed requests.
+   - A local ``` questions.ts ``` file is included as a **fallback**, ensuring the quiz still runs if the API fails.
 
-Install dependencies:
-
-npm install
-
-Install Tailwind CSS and React Router:
-
-npm install react-router-dom
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-Populate the project:
-Replace the generated placeholder files with the code provided for this project.
-
-Running the Application
-Start the development server:
-
-npm run dev
-
-This will run the app in development mode. Open http://localhost:5173 to view it in the browser.
-
-Build for production:
-
-npm run build
-
-This will build the app for production to the dist folder.
+## 📬 Contact
+   **Mail** - 
+   **Project Link** -
