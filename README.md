@@ -103,6 +103,7 @@ Create an optimized, production-ready build:
 
 ## 🏗 Architectural Decisions
    **⚙️ State Management**
+   
    Rather than using a large state library like Redux, this project uses React’s Context API with ``` useReducer ```, managed via a custom ``` useQuiz ``` hook. This approach was chosen because it:
    - Is **lightweight** and avoids unnecessary boilerplate.
    - Encapsulates all quiz logic (state transitions, actions) in a single, cohesive unit ```(useQuiz.tsx)```, making state predictable and easy to maintain.
