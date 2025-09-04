@@ -64,7 +64,7 @@ const Quiz: FC = () => {
             <button
               key={index}
               onClick={() => onSelectAnswer(answer)}
-              className={`p-4 rounded-lg shadow-md font-semibold text-left transition-all duration-300 transform hover:scale-105 ${getButtonClass(answer)}`}
+              className={`p-4 rounded-lg shadow-md font-semibold text-left transition-all duration-300 transform cursor-pointer hover:scale-105 ${getButtonClass(answer)}`}
               disabled={isAnswered}
               dangerouslySetInnerHTML={{ __html: answer }}
             />
@@ -74,7 +74,7 @@ const Quiz: FC = () => {
           <div className="mt-8 text-right">
             <button
               onClick={nextQuestion}
-              className="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform transform hover:scale-105"
+              className="bg-gradient-to-r from-[#ff930f] to-[#fff95b] text-black font-bold py-3 px-6 rounded-lg transition-transform duration-150 ease-in-out cursor-pointer transform hover:scale-110"
             >
               {currentQuestionIndex < questions.length - 1 ? 'Next Question' : 'Finish Quiz'}
             </button>

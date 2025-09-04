@@ -15,7 +15,7 @@ This project showcases strong **front-end fundamentals**, including state manage
 **Live Demo:** [Link Here](#) <!-- TODO: Add your Netlify/Vercel live demo URL -->
 
 <!-- TODO: Replace the placeholder below with a real screenshot of your application -->
-![App Screenshot Placeholder](./screenshot.png)
+![App Screenshot Placeholder](/Screenshot.png)
 
 ---
 

@@ -34,7 +34,7 @@ const Results: FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-indigo-600">Quiz Results</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#ffd100]">Quiz Results</h2>
         <p className="text-xl md:text-2xl text-center mb-8 text-gray-700">You scored <span className="font-bold text-green-500">{score}</span> out of <span className="font-bold">{questions.length}</span>!</p>
 
         <div className="mb-8 p-4 bg-gray-50 rounded-lg">
@@ -67,7 +67,7 @@ const Results: FC = () => {
         <div className="text-center mt-8">
           <button
             onClick={restartQuiz}
-            className="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform transform hover:scale-105"
+            className="bg-gradient-to-r from-[#ff930f] to-[#fff95b] text-black font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition-transform duration-150 ease-in-out cursor-pointer transform hover:scale-110"
           >
             Restart Quiz
           </button>
