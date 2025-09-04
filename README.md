@@ -12,7 +12,7 @@
 A sleek, responsive, and feature-rich quiz application built with modern web technologies.  
 This project showcases strong **front-end fundamentals**, including state management, API handling, and crafting a clean, user-friendly interface.
 
-**Live Demo:** [Link Here](#https://quizwhiz-anurag.vercel.app/) 
+**Live Demo:** [Link Here](https://quizwhiz-anurag.vercel.app/) 
 
 <!-- TODO: Replace the placeholder below with a real screenshot of your application -->
 ![App Screenshot Placeholder](./screenshot.png)
