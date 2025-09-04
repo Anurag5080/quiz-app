@@ -115,5 +115,5 @@ Create an optimized, production-ready build:
    - A local ``` questions.ts ``` file is included as a **fallback**, ensuring the quiz still runs if the API fails.
 
 ## 📬 Contact
-   **Mail** - 
-   **Project Link** -
+   **Mail** -  [Email](anurag26official@gmail.com) 
+   **Project Link** -  [Link Here](https://quizwhiz-anurag.vercel.app/) 
